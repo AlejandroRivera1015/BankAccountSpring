@@ -12,7 +12,7 @@ import com.Bank.Application.Entities.DTO.UserDTO;
 import com.Bank.Application.Services.UserServices.UserServicesImpl;
 
 @RestController
-@RequestMapping("users")
+@RequestMapping("/users")
 public class UsersController {
 
     @Autowired
@@ -22,6 +22,12 @@ public class UsersController {
     public boolean createUser(@RequestBody UserDTO user) {
         return userServices.createUser(user);
     }
+
+    @PostMapping("/logIn")
+    public UserDTO logIn (@RequestBody UserDTO user) {
+        return userServices.logIn(user);
+    }
+    
     
 
 
