@@ -20,6 +20,9 @@ import java.util.Date;
 @Repository
 public interface UsersRepository extends JpaRepository<User,Integer> {
 
+    public List<User> findByEmailAndPassword(String email, String password);
+    
+
 
 
 
