@@ -7,6 +7,9 @@ import com.Bank.Application.Entities.DTO.UserDTO;
 public interface UserServices {
 
     public boolean createUser(UserDTO user);
+
+    public UserDTO logIn(UserDTO user);
+    
     
 
 }
