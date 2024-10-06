@@ -18,7 +18,7 @@ public class UsersController {
     @Autowired
     UserServicesImpl userServices;
 
-    @PostMapping("/createUser")
+    @PostMapping("/create")
     public boolean createUser(@RequestBody UserDTO user) {
         return userServices.createUser(user);
     }
@@ -26,6 +26,7 @@ public class UsersController {
     @PostMapping("/logIn")
     public UserDTO logIn (@RequestBody UserDTO user) {
         return userServices.logIn(user);
+        
     }
     
     
